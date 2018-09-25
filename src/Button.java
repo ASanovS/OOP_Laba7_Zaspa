@@ -1,6 +1,6 @@
-abstract class Button implements NewButton{
+class Button implements NewButton{
 
-    String name, height, depth, width;
+    private String name, height, depth, width;
 
     public Button(String name, String height, String depth, String width) {
         this.name = name;
