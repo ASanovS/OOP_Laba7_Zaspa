@@ -1,0 +1,3 @@
+interface NewButton {
+    String buttonPreparetion();
+}
