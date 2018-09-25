@@ -2,7 +2,7 @@ class Button implements NewButton{
 
     private String name, height, depth, width;
 
-    public Button(String name, String height, String depth, String width) {
+    protected Button(String name, String height, String depth, String width) {
         this.name = name;
         this.height = height;
         this.depth = depth;
