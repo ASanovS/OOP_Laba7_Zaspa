@@ -31,7 +31,7 @@ class Interface implements ActionListener{
         panel.add(b1);
 
         String[] out = {
-                "1",
+                "Button phone",
                 "A",
                 "Escape",
                 "Enter",
