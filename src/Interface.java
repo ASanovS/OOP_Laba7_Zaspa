@@ -31,16 +31,16 @@ class Interface implements ActionListener{
         panel.add(b1);
 
         String[] out = {
-                "Kyiv",
-                "Cherkassy",
-                "Lviv",
-                "Smila",
-                "BilaCerkva",
+                "1",
+                "A",
+                "Escape",
+                "Enter",
+                "Shift",
         };
         cb1 = new JComboBox(out);
         cb1.setActionCommand("box1");
         cb1.addActionListener( this);
-        cb1.setBounds(10,120,100,20);
+        cb1.setBounds(90,280,120,20);
         panel.add(cb1);
 
         frame.setVisible(true);
