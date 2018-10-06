@@ -5,14 +5,14 @@ import java.awt.event.ActionListener;
 
 class Interface implements ActionListener{
 
-      private KeyboardButton keyboardButton;
+
       private JFrame frame;
       private JPanel panel;
       private JButton b1;
       private JComboBox cb1;
 
 
-    //Создание графического интерфейса программы
+    //Creation graphics interface program
 
      void interfaceGUI(){
 
