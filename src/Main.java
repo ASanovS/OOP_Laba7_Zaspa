@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,6 +19,15 @@ public class Main {
         list.add(btn);
 
         System.out.println(list);
+        System.out.println();
+
+        Set<NewButton> set = new HashSet<>();
+        set.add(button);
+        set.add(kbutton);
+        set.add(btn);
+
+        System.out.println(set);
+
 
 
     }

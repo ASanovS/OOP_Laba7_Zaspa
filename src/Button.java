@@ -50,11 +50,6 @@ class Button implements NewButton{
 
     @Override
     public String toString() {
-        return "Button{" +
-                "name='" + name + '\'' +
-                ", height='" + height + '\'' +
-                ", depth='" + depth + '\'' +
-                ", width='" + width + '\'' +
-                '}';
+        return  name + " " + height + " " + depth + " " + width;
     }
 }
