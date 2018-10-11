@@ -10,7 +10,6 @@ class Button implements NewButton{
     }
 
 
-
     @Override
     public String buttonPreparetion() {
         return toString();
@@ -50,6 +49,11 @@ class Button implements NewButton{
 
     @Override
     public String toString() {
-        return  name + " " + height + " " + depth + " " + width;
+        return "Button{" +
+                "name='" + name + '\'' +
+                ", height='" + height + '\'' +
+                ", depth='" + depth + '\'' +
+                ", width='" + width + '\'' +
+                '}';
     }
 }
