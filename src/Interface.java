@@ -46,11 +46,11 @@ class Interface implements ActionListener{
                 "Shift",
         };
 
-//        cb1 = new JComboBox(name);
-//        cb1.setActionCommand("box1");
-//        cb1.addActionListener( this);
-//        cb1.setBounds(90,280,120,20);
-//        panel.add(cb1);
+        cb1 = new JComboBox(name);
+        cb1.setActionCommand("box1");
+        cb1.addActionListener( this);
+        cb1.setBounds(90,280,120,20);
+        panel.add(cb1);
 
         frame.setVisible(true);
     }
