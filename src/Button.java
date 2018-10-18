@@ -1,6 +1,6 @@
 class Button {
 
-    private String weigth, height, color;
+    String weigth, height, color;
 
     public Button(String weigth, String height, String color) {
         this.weigth = weigth;
@@ -12,6 +12,10 @@ class Button {
 
     @Override
     public String toString() {
-        return  "weigth=" + weigth  + ", height=" + height + ", color=" + color;
+        return "Button{" +
+                "weigth='" + weigth + '\'' +
+                ", height='" + height + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }

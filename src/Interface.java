@@ -41,7 +41,7 @@ class Interface implements ActionListener{
         b1.addActionListener( this);
         panel.add(b1);
 
-         List<Button> buttons = new LinkedList<Button>();
+        List<Button> buttons = new LinkedList<Button>();
 
 
         String[] names = {"Button phone","Button","Escape","Enter","Shift",};
@@ -50,7 +50,6 @@ class Interface implements ActionListener{
          for(int i=0; i<5; i++) {
              Button item;
              Random r = new Random();
-
              String weigth = "" + r.nextInt(50);
              String height = "" + r.nextInt(10);
              String color = colors[r.nextInt(colors.length)];
@@ -74,11 +73,11 @@ class Interface implements ActionListener{
     }
 
     @Override
-    items.addActionListener(new ActionListener(){
-        public void actionPerformed(ActionEvent e) {
-            int item =Integer.parseInt((String)items.getSelectedItem()) - 1;
-
-        }
-    });
-
+    public void actionPerformed(ActionEvent e) {
+         switch (e.getActionCommand()) {
+              case "create":
+                  tf.setText("Create objects");
+                  break;
+         }
+    }
 }
