@@ -2,7 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.LinkedList;
+import java.util.*;
+import java.util.List;
 
 
 class Interface implements ActionListener{
@@ -12,7 +13,7 @@ class Interface implements ActionListener{
       private JPanel panel;
       private JButton b1;
       private JComboBox cb1;
-      private TextArea ta;
+      private TextField tf;
 
 
     //Creation graphics interface program
@@ -28,10 +29,10 @@ class Interface implements ActionListener{
         frame.add(panel);
 
         String[] counter = {"1","2","3","4","5"};
-        ta = new TextArea();
-        ta.setBounds(20,20,200,200);
-        ta.setVisible(true);
-        panel.add(ta);
+         tf = new TextField();
+         tf.setBounds(20,20,200,200);
+         tf.setVisible(true);
+        panel.add(tf);
 
 
         b1 = new JButton("Create");
@@ -40,9 +41,28 @@ class Interface implements ActionListener{
         b1.addActionListener( this);
         panel.add(b1);
 
+         List<Button> buttons = new LinkedList<Button>();
+
 
         String[] names = {"Button phone","Button","Escape","Enter","Shift",};
         String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
+
+         for(int i=0; i<5; i++) {
+             Button item;
+             Random r = new Random();
+
+             String weigth = "" + r.nextInt(50);
+             String height = "" + r.nextInt(10);
+             String color = colors[r.nextInt(colors.length)];
+             String name = names[r.nextInt(names.length)];
+
+             if(Math.random() > 0.5) {
+                 item = new KeyboardButton(weigth, height, color, name);
+             } else {
+                 item = new Button(weigth, height, color);
+             }
+             buttons.add(item);
+         }
 
         cb1 = new JComboBox(counter);
         cb1.setActionCommand("box1");
@@ -54,7 +74,11 @@ class Interface implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    items.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent e) {
+            int item =Integer.parseInt((String)items.getSelectedItem()) - 1;
 
-    }
+        }
+    });
+
 }
