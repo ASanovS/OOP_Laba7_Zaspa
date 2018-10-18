@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.LinkedList;
 
 
 class Interface implements ActionListener{
@@ -11,7 +12,7 @@ class Interface implements ActionListener{
       private JPanel panel;
       private JButton b1;
       private JComboBox cb1;
-      private TextField tf;
+      private TextArea ta;
 
 
     //Creation graphics interface program
@@ -26,10 +27,11 @@ class Interface implements ActionListener{
         panel.setLayout(null);
         frame.add(panel);
 
-        tf = new TextField();
-        tf.setBounds(20,20,200,200);
-        tf.setVisible(true);
-        panel.add(tf);
+        String[] counter = {"1","2","3","4","5"};
+        ta = new TextArea();
+        ta.setBounds(20,20,200,200);
+        ta.setVisible(true);
+        panel.add(ta);
 
 
         b1 = new JButton("Create");
@@ -38,15 +40,11 @@ class Interface implements ActionListener{
         b1.addActionListener( this);
         panel.add(b1);
 
-        String[] name = {
-                "Button phone",
-                "Red button",
-                "Escape",
-                "Enter",
-                "Shift",
-        };
 
-        cb1 = new JComboBox(name);
+        String[] names = {"Button phone","Button","Escape","Enter","Shift",};
+        String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
+
+        cb1 = new JComboBox(counter);
         cb1.setActionCommand("box1");
         cb1.addActionListener( this);
         cb1.setBounds(90,280,120,20);
