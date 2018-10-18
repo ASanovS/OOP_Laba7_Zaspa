@@ -28,24 +28,23 @@ class Interface implements ActionListener{
         panel.setLayout(null);
         frame.add(panel);
 
-        String[] counter = {"1","2","3","4","5"};
+        String[] index = {"1","2","3","4","5"};
          tf = new TextField();
          tf.setBounds(20,20,200,200);
          tf.setVisible(true);
         panel.add(tf);
 
 
-        b1 = new JButton("Create");
-        b1.setActionCommand("create");
-        b1.setBounds(90,320,120,20);
-        b1.addActionListener( this);
-        panel.add(b1);
+         b1 = new JButton("Create");
+         b1.setActionCommand("create");
+         b1.setBounds(90,320,120,20);
+         b1.addActionListener( this);
+         panel.add(b1);
 
-        List<Button> buttons = new LinkedList<Button>();
+         String[] names = {"Button phone","Button","Escape","Enter","Shift",};
+         String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
 
-
-        String[] names = {"Button phone","Button","Escape","Enter","Shift",};
-        String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
+         List<Button> buttons = new LinkedList<Button>();
 
          for(int i=0; i<5; i++) {
              Button item;
@@ -63,7 +62,7 @@ class Interface implements ActionListener{
              buttons.add(item);
          }
 
-        cb1 = new JComboBox(counter);
+        cb1 = new JComboBox(index);
         cb1.setActionCommand("box1");
         cb1.addActionListener( this);
         cb1.setBounds(90,280,120,20);
