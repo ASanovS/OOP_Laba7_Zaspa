@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.*;
 import java.util.List;
 
-
 class Interface implements ActionListener{
-
 
       private JFrame frame;
       private JPanel panel;
@@ -15,7 +13,6 @@ class Interface implements ActionListener{
       private JComboBox cb1;
       private JLabel lb;
       private TextField tf;
-
 
     //Creation graphics interface program
 
@@ -33,35 +30,13 @@ class Interface implements ActionListener{
          tf = new TextField();
          tf.setBounds(20,20,550,200);
          tf.setVisible(true);
-        panel.add(tf);
-
+         panel.add(tf);
 
          b1 = new JButton("Create");
          b1.setActionCommand("create");
          b1.setBounds(260,320,120,20);
          b1.addActionListener( this);
          panel.add(b1);
-
-         String[] names = {"Button phone","Button","Escape","Enter","Shift",};
-         String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
-
-         List<Button> buttons = new LinkedList<Button>();
-
-         for(int i=0; i<5; i++) {
-             Button item;
-             Random r = new Random();
-             String weigth = "" + r.nextInt(50);
-             String height = "" + r.nextInt(10);
-             String color = colors[r.nextInt(colors.length)];
-             String name = names[r.nextInt(names.length)];
-
-             if(Math.random() > 0.5) {
-                 item = new KeyboardButton(weigth, height, color, name);
-             } else {
-                 item = new Button(weigth, height, color);
-             }
-             buttons.add(item);
-         }
 
         cb1 = new JComboBox(index);
         cb1.setActionCommand("box1");
@@ -80,7 +55,32 @@ class Interface implements ActionListener{
     public void actionPerformed(ActionEvent e) {
          switch (e.getActionCommand()) {
               case "create":
-                  tf.setText("Create objects");
+
+                  String[] names = {"Button phone","Button","Escape","Enter","Shift",};
+                  String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
+
+                  List<Button> buttons = new LinkedList<Button>();
+
+                  for(int i=0; i<5; i++) {
+                      Button item;
+                      Random r = new Random();
+                      String weigth = "" + r.nextInt(50);
+                      String height = "" + r.nextInt(10);
+                      String color = colors[r.nextInt(colors.length)];
+                      String name = names[r.nextInt(names.length)];
+
+                      if(Math.random() > 0.5) {
+                          item = new KeyboardButton(weigth, height, color, name);
+                      } else {
+                          item = new Button(weigth, height, color);
+                      }
+                      buttons.add(item);
+
+
+                  }
+
+                  tf.setText(buttons.toString());
+
                   lb.setText("Set text objects button");
                   break;
          }
