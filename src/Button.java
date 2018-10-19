@@ -6,16 +6,10 @@ class Button {
         this.weigth = weigth;
         this.height = height;
         this.color = color;
-
     }
-
 
     @Override
     public String toString() {
-        return "Button{" +
-                "weigth='" + weigth + '\'' +
-                ", height='" + height + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "Button: " + "weigth=" + weigth + ", height=" + height + ", color=" + color + "\n";
     }
 }
