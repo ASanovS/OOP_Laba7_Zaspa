@@ -13,6 +13,7 @@ class Interface implements ActionListener{
       private JPanel panel;
       private JButton b1;
       private JComboBox cb1;
+      private JLabel lb;
       private TextField tf;
 
 
@@ -21,7 +22,7 @@ class Interface implements ActionListener{
      void interfaceGUI(){
 
         frame = new JFrame("Laba 7 OOP Asanov S.V." );
-        frame.setSize(300,400);
+        frame.setSize(600,400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         panel = new JPanel();
@@ -30,14 +31,14 @@ class Interface implements ActionListener{
 
         String[] index = {"1","2","3","4","5"};
          tf = new TextField();
-         tf.setBounds(20,20,200,200);
+         tf.setBounds(20,20,550,200);
          tf.setVisible(true);
         panel.add(tf);
 
 
          b1 = new JButton("Create");
          b1.setActionCommand("create");
-         b1.setBounds(90,320,120,20);
+         b1.setBounds(260,320,120,20);
          b1.addActionListener( this);
          panel.add(b1);
 
@@ -65,8 +66,12 @@ class Interface implements ActionListener{
         cb1 = new JComboBox(index);
         cb1.setActionCommand("box1");
         cb1.addActionListener( this);
-        cb1.setBounds(90,280,120,20);
+        cb1.setBounds(260,280,120,20);
         panel.add(cb1);
+
+        lb = new JLabel();
+        lb.setBounds(10,345,400,20);
+        panel.add(lb);
 
         frame.setVisible(true);
     }
@@ -76,6 +81,7 @@ class Interface implements ActionListener{
          switch (e.getActionCommand()) {
               case "create":
                   tf.setText("Create objects");
+                  lb.setText("Set text objects button");
                   break;
          }
     }
