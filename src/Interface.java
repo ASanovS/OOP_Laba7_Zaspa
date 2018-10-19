@@ -90,25 +90,21 @@ class Interface implements ActionListener {
                 break;
 
             case "box1":
-                int item = Integer.parseInt((String)cb1.getSelectedItem());
-                Button button = buttons.get(item);
 
                 if(cb1.getSelectedItem().equals("1")){
-                    tf.setText(button.toString());
+                    tf.setText(buttons.get(0).toString());
                 }else if(cb1.getSelectedItem().equals("2")){
-                    tf.setText(button.toString());
+                    tf.setText(buttons.get(1).toString());
                 }else if(cb1.getSelectedItem().equals("3")){
-                    tf.setText(button.toString());
+                    tf.setText(buttons.get(2).toString());
                 }else if(cb1.getSelectedItem().equals("4")){
-                    tf.setText(button.toString());
+                    tf.setText(buttons.get(3).toString());
                 }else if(cb1.getSelectedItem().equals("5")){
-                    tf.setText(button.toString());
+                    tf.setText(buttons.get(4).toString());
                 }
-
             break;
-
-
-
         }
     }
+
+
 }
