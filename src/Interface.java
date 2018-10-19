@@ -68,7 +68,7 @@ class Interface implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "create":
-
+                buttons = new LinkedList<>();
                 String[] names = {"Button phone", "Button", "Escape", "Enter", "Shift",};
                 String[] colors = {"Red", "Grey", "Blue", "Orange", "Black", "White"};
                 for (int i = 0; i < 5; i++) {
@@ -90,18 +90,8 @@ class Interface implements ActionListener {
                 break;
 
             case "box1":
+                    tf.setText(buttons.get(Integer.parseInt(cb1.getSelectedItem().toString())-1).toString());
 
-                if(cb1.getSelectedItem().equals("1")){
-                    tf.setText(buttons.get(0).toString());
-                }else if(cb1.getSelectedItem().equals("2")){
-                    tf.setText(buttons.get(1).toString());
-                }else if(cb1.getSelectedItem().equals("3")){
-                    tf.setText(buttons.get(2).toString());
-                }else if(cb1.getSelectedItem().equals("4")){
-                    tf.setText(buttons.get(3).toString());
-                }else if(cb1.getSelectedItem().equals("5")){
-                    tf.setText(buttons.get(4).toString());
-                }
             break;
         }
     }
