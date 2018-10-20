@@ -10,6 +10,6 @@ class Button {
 
     @Override
     public String toString() {
-        return "Button: " + "weigth=" + weigth + ", height=" + height + ", color=" + color + "\n";
+        return "Button: weigth=" + weigth + ", height=" + height + ", color=" + color + "\n";
     }
 }

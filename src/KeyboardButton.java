@@ -9,6 +9,6 @@ public class KeyboardButton extends Button {
 
     @Override
     public String toString() {
-        return "KeyboardButton: " + "name=" + name + ", weigth=" + weigth + ", height=" + height + ", color=" + color + "\n";
+        return "KeyboardButton: name=" + name + ", weigth=" + weigth + ", height=" + height + ", color=" + color + "\n";
     }
 }
